@@ -1,0 +1,28 @@
+enable
+configure terminal
+hostname RT-01
+no ip domain-lookup
+ip domain-name info.local
+crypto key generate rsa general-key modulus 512
+banner motd "APENAS PESSOAS AUTORIZADAS PODEM ACESSAR ESSE EQUIPAMENTO"
+username lucasjorge privilege 15 secret batata*0
+enable secret Senai*Enable
+interface gigabitethernet 0/0
+ip address 192.168.10.1 255.255.255.0
+no shutdown
+description CONECTADA A REDE 1
+interface gigabitethernet 0/1
+ip address 172.16.0.1 255.255.0.0
+no shutdown
+description CONECTADA A REDE 2
+exit
+line vty 0 15
+password Senai*VTY
+transport input ssh
+login local
+exit
+line console 0
+password Senai*Console
+login local
+end
+wr
