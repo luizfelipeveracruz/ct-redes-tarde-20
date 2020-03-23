@@ -1,0 +1,30 @@
+enable
+configure terminal
+hostname SW-01
+enable secret batata*enable
+banner motd "ATENCAO! APENAS O DEPARTAMENTO DE TI TEM A AUTORIZACAO PARA ACESSAR ESSE EQUIPAMENTO!"
+ip domain-name batata.local
+crypto key generate rsa general-key modulus 1024
+username userbatata privilege 15 secret batata*00
+line vty 0 15
+password batata*VTY
+transport input ssh
+login local
+exit
+line console 0
+password batata*console
+login local
+exit
+service password-encryption
+no ip domain-lookup
+ip default-gateway 10.0.0.1
+interface vlan 1
+ip address 10.0.0.126 255.255.255.128
+no shutdown
+description INTERFACE DE GERENCIAMENTO
+interface fastethernet 0/1
+description CONECTADA AO PC-01
+interface fastethernet 0/2
+description CONECTADA AO SRV-01
+end
+wr

@@ -1,0 +1,29 @@
+enable
+configure terminal
+hostname RT-01
+enable secret batata*enable
+banner motd "ATENCAO! APENAS O DEPARTAMENTO DE TI TEM A AUTORIZACAO PARA ACESSAR ESSE EQUIPAMENTO!"
+ip domain-name batata.local
+crypto key generate rsa general-key modulus 1024
+username userbatata privilege 15 secret batata*00
+line vty 0 15
+password batata*VTY
+transport input ssh
+login local
+exit
+line console 0
+password batata*console
+login local
+exit
+service password-encryption
+no ip domain-lookup
+interface gigabitethernet 0/0
+ip address 10.0.0.1 255.255.255.128
+description CONECTADA A INTERFACE G0/1 DO SW-01
+no shutdown
+interface gigabitethernet 0/1
+ip address 172.16.0.1 255.255.252.0
+description CONECTADA A INTERFACE G0/1 DO SW-02
+no shutdown
+end
+wr
