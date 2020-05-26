@@ -1,0 +1,36 @@
+enable
+configure terminal
+hostname SW-01
+banner motd "ACESSO APENAS PARA PESSOAS AUTORIZADAS!"
+enable secret SenhadaEnable
+line console 0
+password SenhadaConsole
+exit
+vlan 10
+name REDES
+vlan 20
+name DEV
+vlan 30
+name MULTIMIDIA
+exit
+interface fa0/1
+switchport mode access
+switchport access vlan 10
+description VLAN-10-REDES
+interface fa0/2
+switchport mode access
+switchport access vlan 20
+description VLAN-20-DEV
+interface fa0/3
+switchport mode access
+switchport access vlan 30
+description VLAN-30-MULTIMIDIA
+interface g0/1
+switchport mode trunk
+switchport trunk native vlan 99
+switchport trunk allowed vlan 10,20,30
+interface range f0/4-24
+shutdown
+interface g0/2
+shutdown
+do wr

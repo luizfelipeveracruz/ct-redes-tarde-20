@@ -1,0 +1,89 @@
+<p><span style="color: #000000;">Na empresa em que voc&ecirc; trabalha deseja montar tr&ecirc;s VLANs para separar as redes de tr&ecirc;s departamentos:</span></p>
+<ul>
+<li><span style="color: #000000;">Redes</span></li>
+<li><span style="color: #000000;">Desenvolvimento</span></li>
+<li><span style="color: #000000;">Mult&iacute;midia</span></li>
+</ul>
+<p><span style="color: #000000;">Para cada uma das redes, foi definido essas sub-redes:</span></p>
+<table border="1">
+<tbody>
+<tr style="height: 13px;">
+<td style="height: 13px;"><span style="color: #000000;">DEPARTAMENTO</span></td>
+<td style="height: 13px;"><span style="color: #000000;">ID DA REDE</span></td>
+<td style="height: 13px;"><span style="color: #000000;">M&Aacute;SCARA</span></td>
+</tr>
+<tr style="height: 13px;">
+<td style="height: 13px;"><span style="color: #000000;">Redes</span></td>
+<td style="height: 13px;"><span style="color: #000000;">192.168.0.0</span></td>
+<td style="height: 13px;"><span style="color: #000000;">/26</span></td>
+</tr>
+<tr style="height: 13px;">
+<td style="height: 13px;"><span style="color: #000000;">Desenvolvimento</span></td>
+<td style="height: 13px;"><span style="color: #000000;">192.168.0.64</span></td>
+<td style="height: 13px;"><span style="color: #000000;">/26</span></td>
+</tr>
+<tr style="height: 13px;">
+<td style="height: 13px;"><span style="color: #000000;">Multim&iacute;dia</span></td>
+<td style="height: 13px;"><span style="color: #000000;">192.168.0.128</span></td>
+<td style="height: 13px;"><span style="color: #000000;">/26</span></td>
+</tr>
+</tbody>
+</table>
+<p>Voc&ecirc; deve utilizar as seguintes VLANs para cada departamento:</p>
+<p style="padding-left: 30px;">VLAN 10: REDES<br />VLAN 20:&nbsp;DEV<br />VLAN 30: MULTIMIDIA</p>
+<p>Voc&ecirc; deve utilizar os seguintes IPs e VLANs para cada um dos computadores:</p>
+<table border="1">
+<tbody>
+<tr style="height: 13px;">
+<td style="height: 13px; text-align: center;">HOST</td>
+<td style="height: 13px; text-align: center;">DEPARTAMENTO</td>
+<td style="height: 13px; text-align: center;">IP</td>
+<td style="height: 13px; text-align: center;">VLAN</td>
+</tr>
+<tr style="height: 13px;">
+<td style="height: 13px;">PC-01</td>
+<td style="height: 13px;">REDES</td>
+<td style="height: 13px;">10&ordm; IP V&Aacute;LIDO DA REDE</td>
+<td style="height: 13px; text-align: center;">10</td>
+</tr>
+<tr style="height: 13px;">
+<td style="height: 13px;">PC-02</td>
+<td style="height: 13px;">DEV</td>
+<td style="height: 13px;">10&ordm; IP V&Aacute;LIDO DA REDE</td>
+<td style="height: 13px; text-align: center;">20</td>
+</tr>
+<tr style="height: 13px;">
+<td style="height: 13px;">PC-03</td>
+<td style="height: 13px;">MULTIMIDIA</td>
+<td style="height: 13px;">10&ordm; IP V&Aacute;LIDO DA REDE</td>
+<td style="height: 13px; text-align: center;">30</td>
+</tr>
+<tr style="height: 13px;">
+<td style="height: 13px;">PC-04</td>
+<td style="height: 13px;">REDES</td>
+<td style="height: 13px;">11&ordm; IP V&Aacute;LIDO DA REDE</td>
+<td style="height: 13px; text-align: center;">10</td>
+</tr>
+<tr style="height: 13px;">
+<td style="height: 13px;">PC-05</td>
+<td style="height: 13px;">DEV</td>
+<td style="height: 13px;">11&ordm; IP V&Aacute;LIDO DA REDE</td>
+<td style="height: 13px; text-align: center;">20</td>
+</tr>
+<tr style="height: 13px;">
+<td style="height: 13px;">PC-06</td>
+<td style="height: 13px;">MULTIMIDIA</td>
+<td style="height: 13px;">11&ordm; IP V&Aacute;LIDO DA REDE</td>
+<td style="height: 13px; text-align: center;">30</td>
+</tr>
+</tbody>
+</table>
+<p>Nos switches voc&ecirc; deve configurar as seguintes informa&ccedil;&otilde;es:</p>
+<ul>
+<li>Hostname</li>
+<li>Senha de Enable: SenhadaEnable</li>
+<li>Senha da Console: SenhadaConsole</li>
+<li>Banner: ACESSO APENAS PARA PESSOAS AUTORIZADAS!</li>
+<li><strong>DESATIVAR TODAS AS INTERFACES QUE N&Atilde;O EST&Atilde;O EM USO!</strong></li>
+<li><strong>UTILIZAR A VLAN 99 COMO VLAN NATIVA!</strong></li>
+</ul>
