@@ -1,0 +1,138 @@
+<p><span style="color: #000000;">Na empresa em que voc&ecirc; trabalha deseja existem quatro VLANs para separar as redes de quatro departamentos:</span></p>
+<ul>
+<li><span style="color: #000000;">RH</span></li>
+<li>Administra&ccedil;&atilde;o</li>
+<li><span style="color: #000000;">Ger&ecirc;ncia</span></li>
+<li><span style="color: #000000;">TI</span></li>
+</ul>
+<p><span style="color: #000000;">Para cada uma das redes, foi definido essas sub-redes:</span></p>
+<table style="width: 248px;" border="1">
+<tbody>
+<tr style="height: 13px;">
+<td style="height: 13px; width: 90px;"><strong><span style="color: #000000;">DEPARTAMENTO</span></strong></td>
+<td style="height: 13px; width: 75px;"><strong><span style="color: #000000;">ID DA REDE</span></strong></td>
+<td style="height: 13px; width: 61px;"><strong><span style="color: #000000;">M&Aacute;SCARA</span></strong></td>
+</tr>
+<tr style="height: 13px;">
+<td style="height: 13px; width: 90px;"><span style="color: #000000;">RH</span></td>
+<td style="height: 13px; width: 75px;"><span style="color: #000000;">192.168.0.0</span></td>
+<td style="height: 13px; width: 61px;"><span style="color: #000000;">/27</span></td>
+</tr>
+<tr style="height: 13px;">
+<td style="height: 13px; width: 90px;"><span style="color: #000000;">Administra&ccedil;&atilde;o</span></td>
+<td style="height: 13px; width: 75px;"><span style="color: #000000;">192.168.0.32</span></td>
+<td style="height: 13px; width: 61px;"><span style="color: #000000;">/28</span></td>
+</tr>
+<tr style="height: 13px;">
+<td style="height: 13px; width: 90px;"><span style="color: #000000;">Ger&ecirc;ncia</span></td>
+<td style="height: 13px; width: 75px;"><span style="color: #000000;">192.168.0.48</span></td>
+<td style="height: 13px; width: 61px;"><span style="color: #000000;">/28</span></td>
+</tr>
+<tr style="height: 13px;">
+<td style="height: 13px; width: 90px;"><span style="color: #000000;">TI</span></td>
+<td style="height: 13px; width: 75px;"><span style="color: #000000;">192.168.0.64</span></td>
+<td style="height: 13px; width: 61px;"><span style="color: #000000;">/28</span></td>
+</tr>
+</tbody>
+</table>
+<p>As seguinte VLAN s&atilde;o utilizadas</p>
+<p>VLAN 10:&nbsp;RH<br />VLAN 20: ADM<br />VLAN 30:&nbsp;GER<br />VLAN 40: TI</p>
+<p>Voc&ecirc; deve utilizar os seguintes IPs e VLANs para cada um dos computadores:</p>
+<table border="1">
+<tbody>
+<tr style="height: 13px;">
+<td style="height: 13px; text-align: center;"><strong>HOST</strong></td>
+<td style="height: 13px; text-align: center;"><strong>DEPARTAMENTO</strong></td>
+<td style="height: 13px; text-align: center;"><strong>IP</strong></td>
+<td style="height: 13px; text-align: center;"><strong>VLAN</strong></td>
+</tr>
+<tr style="height: 13px;">
+<td style="height: 13px;">PC-01</td>
+<td style="height: 13px;">ADM</td>
+<td style="height: 13px;">10&ordm; IP V&Aacute;LIDO DA REDE</td>
+<td style="height: 13px; text-align: center;">20</td>
+</tr>
+<tr style="height: 13px;">
+<td style="height: 13px;">PC-02</td>
+<td style="height: 13px;">RH</td>
+<td style="height: 13px;">10&ordm; IP V&Aacute;LIDO DA REDE</td>
+<td style="height: 13px; text-align: center;">10</td>
+</tr>
+<tr style="height: 13px;">
+<td style="height: 13px;">PC-03</td>
+<td style="height: 13px;">GERENCIA</td>
+<td style="height: 13px;">10&ordm; IP V&Aacute;LIDO DA REDE</td>
+<td style="height: 13px; text-align: center;">30</td>
+</tr>
+<tr style="height: 13px;">
+<td style="height: 13px;">PC-04</td>
+<td style="height: 13px;">RH</td>
+<td style="height: 13px;">11&ordm; IP V&Aacute;LIDO DA REDE</td>
+<td style="height: 13px; text-align: center;">10</td>
+</tr>
+<tr style="height: 13px;">
+<td style="height: 13px;">PC-05</td>
+<td style="height: 13px;">TI</td>
+<td style="height: 13px;">5&ordm; IP V&Aacute;LIDO DA REDE</td>
+<td style="height: 13px; text-align: center;">40</td>
+</tr>
+<tr style="height: 13px;">
+<td style="height: 13px;">PC-06</td>
+<td style="height: 13px;">TI</td>
+<td style="height: 13px;">6&ordm; IP V&Aacute;LIDO DA REDE</td>
+<td style="height: 13px; text-align: center;">40</td>
+</tr>
+</tbody>
+</table>
+<p>Usar os seguintes IPs no switches</p>
+<table style="width: 320px;" border="1">
+<tbody>
+<tr style="height: 13px;">
+<td style="width: 89px; height: 13px; text-align: center;"><strong>SWITCH</strong></td>
+<td style="width: 10px; height: 13px; text-align: center;"><strong>IP</strong></td>
+<td style="width: 10px; height: 13px; text-align: center;"><strong>M&Aacute;SCARA</strong></td>
+<td style="width: 82px; height: 13px; text-align: center;"><strong>VLAN</strong></td>
+</tr>
+<tr style="height: 13px;">
+<td style="width: 89px; height: 13px;">SW-CORE</td>
+<td style="width: 10px; height: 13px;">192.168.0.78</td>
+<td style="width: 10px; height: 13px;">/28</td>
+<td style="width: 82px; height: 13px;">40</td>
+</tr>
+<tr style="height: 13px;">
+<td style="width: 89px; height: 13px;">SW-TI</td>
+<td style="width: 10px; height: 13px;">192.168.0.77</td>
+<td style="width: 10px; height: 13px;">/28</td>
+<td style="width: 82px; height: 13px;">40</td>
+</tr>
+<tr style="height: 26px;">
+<td style="width: 89px; height: 26px;">SW-USUARIOS</td>
+<td style="width: 10px; height: 26px;">192.168.0.76</td>
+<td style="width: 10px; height: 26px;">/28</td>
+<td style="width: 82px; height: 26px;">40</td>
+</tr>
+</tbody>
+</table>
+<p>Nos switches voc&ecirc; deve configurar as seguintes informa&ccedil;&otilde;es:</p>
+<ul>
+<li>Hostname</li>
+<li>Senha de Enable: SenhadaEnable</li>
+<li>Banner: ACESSO APENAS PARA PESSOAS AUTORIZADAS!</li>
+<li>Criar usu&aacute;rio e senha local:
+<ul>
+<li>User: lucasjorge</li>
+<li>Senha: batata-s2</li>
+<li>Privilege: 15</li>
+</ul>
+</li>
+<li>Dom&iacute;nio: empresa.local</li>
+<li>Gerar a chave de criptografia com 1024 bits</li>
+<li>Acesso remoto utilizando o SSH&nbsp;utilizando o usu&aacute;rio local nas linhas de VTY (0 &agrave; 15)</li>
+<li>Ativar o login local na Console</li>
+<li>Encriptar todas as senhas em texto-plano</li>
+<li>Utilizar a VLAN do departamento de TI como <strong>VLAN de Gerenciamento</strong></li>
+<li><strong>APENAS O DEPARTAMENTO DE TI PODE ACESSAR OS SWITCHES REMOTAMENTE</strong></li>
+<li><strong>DESATIVAR TODAS AS INTERFACES QUE N&Atilde;O EST&Atilde;O EM USO!</strong></li>
+<li><strong>UTILIZAR A VLAN 99 COMO VLAN NATIVA!<br /></strong></li>
+<li><strong>O SWITCH-CORE J&Aacute; EST&Aacute; CONFIGURADO!</strong></li>
+</ul>
