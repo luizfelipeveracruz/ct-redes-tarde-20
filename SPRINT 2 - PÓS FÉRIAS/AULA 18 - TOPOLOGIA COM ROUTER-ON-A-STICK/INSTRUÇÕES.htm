@@ -1,0 +1,104 @@
+<p>Voc&ecirc; foi contratado para montar um ambiente com duas VLANs, onde voc&ecirc; deve conectar as duas utilizando o m&eacute;todo Router-on-a-Stick, seguindo uma topologia previamente fornecida.</p>
+<p>As duas VLANS s&atilde;o:</p>
+<ul style="list-style-type: square;">
+<li>VLAN 30 - USUARIOS</li>
+<li>VLAN 40 - SERVIDORES</li>
+</ul>
+<p>&nbsp;Voc&ecirc; deve utilizar as seguintes VLANs para Gerenciamento e Nativa:</p>
+<ul style="list-style-type: square;">
+<li>VLAN 99 - NATIVA</li>
+<li>VLAN 90 - GERENCIAMENTO</li>
+</ul>
+<p>As VLANs utilizam as seguintes subredes:</p>
+<ul>
+<li>VLAN 30 - 172.16.0.0/27</li>
+<li>VLAN 40 - 172.16.0.32/28</li>
+<li>VLAN 90 - 172.16.1.0/24</li>
+</ul>
+<p>Abaixo est&aacute; a tabela de endere&ccedil;amento dos dispositivos finais:</p>
+<table border="1">
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>NOME</strong></td>
+<td style="text-align: center;"><strong>GRUPO</strong></td>
+<td style="text-align: center;"><strong>ENDERE&Ccedil;O IP</strong></td>
+</tr>
+<tr>
+<td>PC-01</td>
+<td>USU&Aacute;RIOS</td>
+<td>5&ordm; V&Aacute;LIDO IP DA REDE</td>
+</tr>
+<tr>
+<td>PC-02</td>
+<td>USU&Aacute;RIOS</td>
+<td>6&ordm; V&Aacute;LIDO IP DA REDE</td>
+</tr>
+<tr>
+<td>SRV-WEB</td>
+<td>SERVIDORES</td>
+<td>8&ordm; V&Aacute;LIDO IP DA REDE</td>
+</tr>
+</tbody>
+</table>
+<p><span style="color: #ff0000;"><strong>No SRV-WEB voc&ecirc; deve editar o arquivo index.html para exibir a seguinte mensagem "BEM VINDO A EMPRESA HYRULE.INC!" quando algu&eacute;m acessar.</strong></span></p>
+<p>O Roteador deve ser configurado com as seguintes subinterfaces:</p>
+<table border="1">
+<tbody>
+<tr>
+<td><strong>NOME</strong></td>
+<td><strong>SUBINTERFACES</strong></td>
+<td><strong>VLAN</strong></td>
+<td><strong>ENDERE&Ccedil;O IP</strong></td>
+</tr>
+<tr>
+<td>RT-01</td>
+<td>g0/0.30</td>
+<td>30</td>
+<td>1&ordm; IP V&Aacute;LIDO DA REDE</td>
+</tr>
+<tr>
+<td>RT-01</td>
+<td>g0/0.40</td>
+<td>40</td>
+<td>1&ordm; IP V&Aacute;LIDO DA REDE</td>
+</tr>
+</tbody>
+</table>
+<p>O switch deve est&aacute; configurado com a seguinte interface de gerenciamento</p>
+<table border="1">
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>NOME</strong></td>
+<td style="text-align: center;"><strong>INTERFACE</strong></td>
+<td style="text-align: center;"><strong>ENDERE&Ccedil;O IP</strong></td>
+</tr>
+<tr>
+<td>SW-01</td>
+<td>VLAN 90</td>
+<td>&Uacute;LTIMO ENDERE&Ccedil;O V&Aacute;LIDO DA REDE</td>
+</tr>
+</tbody>
+</table>
+<p><strong><span style="color: #ff0000;">No Switch configurar a Interface Fa0/24 em Modo Access na VLAN de Gerenciamento!</span></strong></p>
+<p>No Switch e no Roteador, voc&ecirc; deve configurar as seguintes informa&ccedil;&otilde;es:</p>
+<ul style="list-style-type: circle;">
+<li>Hostname</li>
+<li>Senha de Enable: 3force20</li>
+<li>Banner: ACESSO APENAS PARA PESSOAS AUTORIZADAS!</li>
+<li>Criar usu&aacute;rio e senha local:<br />
+<ul>
+<li>User:&nbsp;linkdoti</li>
+<li>Senha: masterkey86</li>
+<li>Privilege: 15</li>
+</ul>
+</li>
+<li>Dom&iacute;nio: hyrule.local</li>
+<li>Gerar a chave de criptografia com 1024 bits</li>
+<li>Acesso remoto utilizando o SSH utilizando o usu&aacute;rio local nas linhas de VTY (0 &agrave; 15)</li>
+<li>Ativar o login local na Console</li>
+<li><strong>APENAS O A VLAN DE GERENCIAMENTO PODE ACESSAR OS SWITCHES REMOTAMENTE</strong></li>
+<li><strong><strong>DESATIVAR TODAS AS INTERFACES QUE N&Atilde;O EST&Atilde;O EM USO!&nbsp;</strong></strong><strong>N&Atilde;O DESATIVAR A INTERFACE Fa0/24!</strong>
+<p>&nbsp;</p>
+</li>
+</ul>
+<p>&nbsp;</p>
